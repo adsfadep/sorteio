@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="webServiceApp">
+<head>
+	<meta charset="utf-8">
+	<title>Despesas Online</title>
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript" src="lib/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-locale_pt-br.js"></script>
+
+	<script type="text/javascript" src="js/webServiceCtrl.js"></script>
+
+</head>
+
+<body ng-controller="webServiceCtrl">
+	<div class="jumbotron">
+		<h3>{{nameApp}}</h3>
+		<br>
+		<div class="ip">
+			<label>IP</label>
+			<input class="form-control" type="text" ng-model="ip">
+		</div>
+		<br>
+		<h4>Sorter Números</h4>
+		<br>
+		<label>Caminho Serviço Web</label>
+		<input class="form-control" type="text" ng-model="servicoSalvar" placeholder="Caminho Serviço"/>
+		<br>
+		<form>
+			<div class="form-group">
+				<input class="form-control" type="text" ng-model="aposta.nome" placeholder="Nome"/>
+				<br>
+				<input class="form-control" type="number" ng-model="numero1" placeholder="Número 1"/>
+				<input class="form-control" type="number" ng-model="numero2" placeholder="Número 2"/>
+				<input class="form-control" type="number" ng-model="numero3" placeholder="Número 3"/>
+				<input class="form-control" type="number" ng-model="numero4" placeholder="Número 4"/>
+				<input class="form-control" type="number" ng-model="numero5" placeholder="Número 5"/>
+				<input class="form-control" type="number" ng-model="numero6" placeholder="Número 6"/>
+				<button class="btn btn-block btn-primary" type="button" ng-click="salvar(aposta)">Salvar</button>
+			</div>
+		</form>
+		<br>
+		<br>
+		<button type="button" class="btn btn-block">Sortear</button>
+		<h2>Ganhador: {{ganhador}}</h2>
+		<h3>Números: {{numerosSorteados}}</h3>
+	</div>
+</body>
+</html>
