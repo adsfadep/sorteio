@@ -43,9 +43,54 @@
 		</form>
 		<br>
 		<br>
-		<button type="button" class="btn btn-block">Sortear</button>
-		<h2>Ganhador: {{ganhador}}</h2>
-		<h3>Números: {{numerosSorteados}}</h3>
+		<button type="button" class="btn btn-block" ng-click="sortear()">Sortear</button>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						Ganhador
+					</th>
+					<th>
+						Números
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="ganhador in ganhadores">
+					<td>
+						{{ganhador.nome}}
+					</td>
+					<td>
+						{{ganhador.numeros}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+		<button type="button" class="btn btn-block" ng-click="buscarTodos()">Mostrar todas as apostas</button>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						Nome
+					</th>
+					<th>
+						Números
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="apostador in apostas">
+					<td>
+						{{apostador.nome}}
+					</td>
+					<td>
+						{{apostador.numeros}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
